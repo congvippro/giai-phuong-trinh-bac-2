@@ -10,7 +10,7 @@ int main(int argc, char** argv) {
 	int denta;
 	cin>>a;
 	cin>>b;
-	cin>>c;	
+	cin>>c;
 	denta=b*b-4*a*c;
 	if (a==0)
 	  {
@@ -22,11 +22,15 @@ int main(int argc, char** argv) {
           {
 		    cout<<"INF";
 		  }
-	    else if (b!=0)
-	      { 
+	    else if (b!=0 && c!=0)
+	      {
             d=-c/b;
 		    printf("%0.2f",d);
-		  } 
+		  }
+        else if (b!=0 && c==0)
+          {
+            printf("%0.2f",0);
+          }
 	  }
 	if (a!=0)
 	  {
@@ -35,9 +39,18 @@ int main(int argc, char** argv) {
 	      {
 		    x1=((-b)-sqrt(denta))/(2*a);
 			x2=((-b)+sqrt(denta))/(2*a);
-			printf("%0.2f",x1);
-			cout<<" ";
-			printf("%0.2f",x2);
+			if (x1<x2)
+            {
+			   printf("%0.2f",x1);
+			   cout<<" ";
+			   printf("%0.2f",x2);
+            }
+            else
+            {
+               printf("%0.2f",x2);
+			   cout<<" ";
+			   printf("%0.2f",x1);
+            }
 		  }
 		else if (denta==0)
 		  {
