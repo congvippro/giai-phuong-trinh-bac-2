@@ -54,7 +54,7 @@ int main(int argc, char** argv) {
 		  }
 		else if (denta==0)
 		  {
-		    x1=-b/2*a;
+		    x1=-b/(float)2*a;
 		    printf("%0.2f",x1);
 		  }
 		else if (denta<0)
