@@ -24,7 +24,7 @@ int main(int argc, char** argv) {
 		  }
 	    else if (b!=0 && c!=0)
 	      {
-            d=-c/b;
+            d=-c/(float)b;
 		    printf("%0.2f",d);
 		  }
         else if (b!=0 && c==0)
